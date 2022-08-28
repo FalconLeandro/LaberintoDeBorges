@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Source+Sans+Pro:ital,wght@0,300;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Merriweather+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Source+Sans+Pro:ital,wght@0,300;1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.banner {
+  padding: 5% 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 99;
+}
+.banner .sentidos .p1 {
+  font-family: "Libre Baskerville", serif;
+  color: white;
+  font-size: 2.5em;
+}
+
+.logo img {
+  width: 270px;
+}
+
+.p2 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.5em;
+  color: aliceblue;
+}
+
+#nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  height: 55px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#nav .social {
+  left: 3%;
+  position: absolute;
+}
+#nav .social a i {
+  font-size: 1em;
+  color: aliceblue;
+  margin: 0% 5px;
+}
+#nav ul {
+  display: flex;
+  list-style: none;
+  font-size: 0.7em;
+}
+#nav ul li {
+  padding: 0 5px;
+}
+#nav ul li a {
+  font-family: "Source Sans Pro", sans-serif;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 1px;
+}
+
+header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-size: cover;
+  background-position: bottom;
+  height: 100vh;
+  width: 100%;
+  z-index: 95;
+  background: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  transition: height 999999999s ease;
+}
+header .header-video {
+  display: none;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  width: -webkit-fill-available;
+  z-index: 99;
+}
+header .header-video video {
+  width: 100vw;
+  animation: appear;
+}
+header .images {
+  position: relative;
+  height: 100vh;
+}
+header .images .scaling {
+  display: none;
+  background-image: url("../../media/Aereas 4.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+  transition: height 999999999s ease;
+  animation-name: scaling;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+header .images .appear {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+}
+header .images .appear .show {
+  animation-name: appear;
+  animation-duration: 15s;
+  animation-timing-function: cubic-bezier(0.5, 0.74, 0.14, 0.99);
+  animation-fill-mode: forwards;
+}
+
+@keyframes scaling {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+@keyframes appear {
+  0% {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  100% {
+    background: transparent;
+  }
+}
+.contacto {
+  background-image: url("../../media/fondo.png");
+  background-size: cover;
+  color: #fff;
+}
+.contacto h2 {
+  font-size: 36px;
+  color: #fff;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0 0 15px;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  padding: 25px;
+}
+.contacto .contact-left {
+  width: 100%;
+  float: left;
+  height: auto;
+}
+@media only screen and (max-width: 767px) {
+  .contacto .contact-left {
+    margin: 0 0 20px;
+  }
+}
+.contacto .contact-left ul {
+  margin: 0;
+  list-style-type: none;
+  padding: inherit;
+}
+.contacto .contact-left ul li {
+  margin: 0 0 20px;
+}
+.contacto .contact-left ul li .icon {
+  display: table-cell;
+  vertical-align: middle;
+  width: 70px;
+}
+.contacto .contact-left ul li .icon .fa {
+  width: 50px;
+  line-height: 48px;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 20px;
+  display: inline-block;
+  font-size: inherit;
+  text-rendering: auto;
+}
+.contacto .contact-left ul li .contact-info {
+  display: table-cell;
+  vertical-align: middle;
+}
+.contacto .contact-left ul li .contact-info p {
+  font-size: 15px;
+  margin: 0 0 15px;
+  font-weight: 300;
+  line-height: 24px;
+}
+.contacto .contact-right .form-control {
+  height: 50px;
+  color: #fff;
+  box-shadow: none !important;
+  border: 1px solid #faf9f9;
+  background: none;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+.contacto .contact-right .form-control .form-control:focus {
+  border-color: #8b1f31;
+  outline: none !important;
+}
+.contacto .contact-right .form-control textarea {
+  height: auto;
+}
+.contacto .contact-right .btn-primary {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 500;
+  width: auto;
+  line-height: 42px;
+  padding: 0 30px;
+  display: inline-block;
+  border: 1px solid #8b1f31;
+  background: orange;
+}

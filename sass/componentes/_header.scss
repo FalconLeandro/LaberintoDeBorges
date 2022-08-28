@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Merriweather+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Source+Sans+Pro:ital,wght@0,300;1,300&display=swap');
+
+// $colors: #360745, #D61C59, #E7D84B, #EFEAC5, #1B8798;
+
+// BODY {
+//   background: hsl(200,70,11);
+//   background-size: .12em 100%;
+//   font: 16em/1 Arial;
+// }
+
+// .text--line {
+//   font-size: .5em;
+//   }
+
+// svg {
+    
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   }
+
+// $max: 5;
+// $stroke-step: 7%; 
+// .text-copy {
+//   fill: none;
+//   stroke: white;
+//   stroke-dasharray: $stroke-step $stroke-step * ($max - 1);
+//   stroke-width: 3px;
+  
+//   animation: stroke-offset 9s infinite linear;
+  
+//   @for $item from 1 through $max {
+//     $stroke-color: nth($colors, $item);
+    
+//     &:nth-child(#{$item}) {
+//       stroke: $stroke-color;
+//       stroke-dashoffset: $stroke-step * $item;
+//       }
+//     }
+//   }
+
+// @keyframes stroke-offset {
+//   50% {
+//     stroke-dashoffset: $stroke-step * $max;  
+//     stroke-dasharray: 0 $stroke-step * $max*2.5;
+//   }
+// }
+
+#nav{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    height: 55px;
+    background-color: rgba(0,0,0,0.7);
+    .social{
+        left: 3%;
+        position: absolute;
+        a i{
+            font-size: 1em;
+            color: aliceblue;
+            margin: 0% 5px;
+        }
+    }        
+    ul{
+        display: flex;
+        list-style: none;
+        font-size: .7em;
+        li{
+            padding: 0 5px;
+            a{
+                // font-family: 'Merriweather Sans', sans-serif;
+                // font-family: 'Libre Baskerville', serif;
+                font-family: "Source Sans Pro", sans-serif;
+
+                text-decoration: none;
+                color: white;
+                letter-spacing: 1px;
+            }
+
+        }
+    }
+}
+header{
+    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-size: cover;
+    background-position: bottom;
+    height: 100vh;
+    width: 100%;
+    z-index: 95;
+    background: rgba(0,0,0,0.7);
+    overflow: hidden;
+    transition: height 999999999s ease;
+    .header-video {
+        display: none;
+        position: absolute;
+        top: 0;
+        overflow: hidden;
+        width: -webkit-fill-available; 
+        z-index: 99;
+        video{
+            width: 100vw;
+            animation: appear;
+
+        }
+      }
+    
+    .images{
+        position: relative;
+        height: 100vh;
+
+        .scaling{
+            display: none;
+            background-image: url('../../media/Aereas\ 4.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            z-index: 1;
+            transition: height 999999999s ease;
+
+            animation-name: scaling;
+                animation-duration: 15s;
+                animation-timing-function: linear;
+                animation-fill-mode: forwards;
+            // .show{
+            //     animation-name: scaling;
+            //     animation-duration: 15s;
+            //     animation-timing-function: linear;
+            //     animation-fill-mode: forwards;
+            // }
+        }
+        .appear{
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+            height: 100vh;
+            .show{
+                animation-name: appear;
+                animation-duration: 15s;
+                animation-timing-function: cubic-bezier(.5, .74, .14, .99);
+                animation-fill-mode: forwards;
+            }
+        }
+        
+        
+    }
+    
+    
+    
+
+}
+
+
+@keyframes scaling{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
+@keyframes appear{
+    0%{
+        background:rgba(0,0,0,0.8);
+    }
+    100%{
+        background:transparent;
+    }
+}
