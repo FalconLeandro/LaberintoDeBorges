@@ -1,0 +1,64 @@
+
+// .espacios{
+//     background-image: url('../../media/fondo.png');
+//     color: white;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     // img{
+//     //     width: 50vw;
+//     //     height: 75vh;
+//     //     position: relative;
+//     // }
+//     h2, h3{
+//         position: absolute;
+//     }
+//     p{
+
+//     }
+// }
+
+.contenedor-espacios{
+    display: flex;
+    &:nth-child(even){
+        .espacios-descripcion{
+            //en las news pares el texto se va a acomodar a la izq
+            order: -1;
+            @media screen and (max-width: 992px) {
+                order: inherit;
+            }
+        }
+    }
+    &:hover{
+        background-color: $color-secundario;
+    }
+    .espacios-imagen{
+        padding-left: 0;
+        width: 75%;
+        height: 100%;
+        position: relative;
+        @media screen and (max-width: 992px) {
+            width: 100%;
+        }
+        img{
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+        h2, h3{
+            position: absolute;
+            top: 80%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+        }
+        // agregar width y heigth para las fotos posta (todas igual tamaño)
+        //chequear los id de cada imagen y replicar el codigo
+    }
+    .espacios-descripcion{
+        padding: 2%;
+        text-align: justify;
+        align-items: center;
+    }
+    
+}
+

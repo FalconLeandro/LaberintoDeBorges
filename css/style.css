@@ -12,6 +12,14 @@ a {
   color: black;
 }
 
+@font-face {
+  font-family: titulos;
+  src: url(../../tipografias/TrajanPro-Regular.otf);
+}
+@font-face {
+  font-family: body;
+  src: url(../../tipografias/GARA.TTF);
+}
 .banner {
   padding: 5% 8%;
   display: flex;
@@ -144,6 +152,69 @@ header .images .appear .show {
     background: transparent;
   }
 }
+.intro {
+  background-image: url("../../media/fondo.png");
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-family: body;
+  padding: 100px 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.intro p {
+  font-size: 1.2rem;
+  padding: 20px 200px;
+}
+.intro #fftitulos {
+  font-family: titulos;
+}
+
+.contenedor-espacios {
+  display: flex;
+}
+.contenedor-espacios:nth-child(even) .espacios-descripcion {
+  order: -1;
+}
+@media screen and (max-width: 992px) {
+  .contenedor-espacios:nth-child(even) .espacios-descripcion {
+    order: inherit;
+  }
+}
+.contenedor-espacios:hover {
+  background-color: #f5efd3;
+}
+.contenedor-espacios .espacios-imagen {
+  padding-left: 0;
+  width: 75%;
+  height: 100%;
+  position: relative;
+}
+@media screen and (max-width: 992px) {
+  .contenedor-espacios .espacios-imagen {
+    width: 100%;
+  }
+}
+.contenedor-espacios .espacios-imagen img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+.contenedor-espacios .espacios-imagen h2, .contenedor-espacios .espacios-imagen h3 {
+  position: absolute;
+  top: 80%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+.contenedor-espacios .espacios-descripcion {
+  padding: 2%;
+  text-align: justify;
+  align-items: center;
+}
+
 .contacto {
   background-image: url("../../media/fondo.png");
   background-size: cover;
