@@ -1,6 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Source+Sans+Pro:ital,wght@0,300;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Merriweather+Sans:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Source+Sans+Pro:ital,wght@0,300;1,300&display=swap");
+@font-face {
+  font-family: titulos;
+  src: url(../../tipografias/TrajanPro-Regular.otf);
+}
+@font-face {
+  font-family: body;
+  src: url(../../tipografias/GARA.TTF);
+}
+@font-face {
+  font-family: frases;
+  src: url(../../tipografias/Austhina\ Brush\ Calligraphy\ Scratch\ .ttf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -12,14 +24,6 @@ a {
   color: black;
 }
 
-@font-face {
-  font-family: titulos;
-  src: url(../../tipografias/TrajanPro-Regular.otf);
-}
-@font-face {
-  font-family: body;
-  src: url(../../tipografias/GARA.TTF);
-}
 .banner {
   padding: 5% 8%;
   display: flex;
@@ -156,9 +160,9 @@ header .images .appear .show {
   background-image: url("../../media/fondo.png");
   width: 100%;
   height: 100%;
+  padding: 10%;
   color: white;
   font-family: body;
-  padding: 100px 50px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -167,52 +171,97 @@ header .images .appear .show {
 }
 .intro p {
   font-size: 1.2rem;
-  padding: 20px 200px;
+  padding-top: 5%;
 }
-.intro #fftitulos {
+.intro #fontTitulo {
   font-family: titulos;
 }
 
-.contenedor-espacios {
+.espacios .contenedor-espacios {
+  font-family: body;
   display: flex;
 }
-.contenedor-espacios:nth-child(even) .espacios-descripcion {
+.espacios .contenedor-espacios:nth-child(even) .espacios-descripcion {
   order: -1;
 }
 @media screen and (max-width: 992px) {
-  .contenedor-espacios:nth-child(even) .espacios-descripcion {
+  .espacios .contenedor-espacios:nth-child(even) .espacios-descripcion {
     order: inherit;
   }
 }
-.contenedor-espacios:hover {
-  background-color: #f5efd3;
-}
-.contenedor-espacios .espacios-imagen {
-  padding-left: 0;
-  width: 75%;
+.espacios .contenedor-espacios .espacios-imagen {
+  width: 50%;
   height: 100%;
   position: relative;
 }
 @media screen and (max-width: 992px) {
-  .contenedor-espacios .espacios-imagen {
+  .espacios .contenedor-espacios .espacios-imagen {
     width: 100%;
   }
 }
-.contenedor-espacios .espacios-imagen img {
+.espacios .contenedor-espacios .espacios-imagen img {
+  padding: 7%;
   width: 100%;
   height: 500px;
   object-fit: cover;
 }
-.contenedor-espacios .espacios-imagen h2, .contenedor-espacios .espacios-imagen h3 {
-  position: absolute;
-  top: 80%;
-  left: 40%;
+.espacios .contenedor-espacios .espacios-imagen h2, .espacios .contenedor-espacios .espacios-imagen h3 {
   transform: translate(-50%, -50%);
 }
-.contenedor-espacios .espacios-descripcion {
-  padding: 2%;
-  text-align: justify;
+.espacios .contenedor-espacios .espacios-imagen #fontTitulo {
+  position: absolute;
+  font-family: titulos;
+  color: white;
+  top: 10%;
+  left: 40%;
+  background-color: #8d323a;
+  padding: 10px 20px;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .espacios .contenedor-espacios .espacios-imagen #fontTitulo {
+    left: 40%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .espacios .contenedor-espacios .espacios-imagen #fontTitulo {
+    left: 25%;
+  }
+}
+@media screen and (max-width: 772px) {
+  .espacios .contenedor-espacios .espacios-imagen #fontTitulo {
+    left: 50%;
+  }
+}
+.espacios .contenedor-espacios .espacios-imagen #fontFrase {
+  position: absolute;
+  font-family: frases;
+  color: white;
+  bottom: 8%;
+  left: 78%;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .espacios .contenedor-espacios .espacios-imagen #fontFrase {
+    left: 77%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .espacios .contenedor-espacios .espacios-imagen #fontFrase {
+    left: 85%;
+  }
+}
+@media screen and (max-width: 772px) {
+  .espacios .contenedor-espacios .espacios-imagen #fontFrase {
+    left: 50%;
+  }
+}
+.espacios .contenedor-espacios .espacios-descripcion {
+  font-size: 1.5rem;
+  display: flex;
   align-items: center;
+  text-align: justify;
+}
+.espacios .contenedor-espacios .espacios-descripcion p {
+  padding: 7%;
 }
 
 .contacto {
