@@ -1,2 +1,14 @@
 $color-primario: #8d323a;
 $color-secundario: #f5efd3;
+@font-face {
+    font-family: titulos;
+    src: url(../../tipografias/TrajanPro-Regular.otf);
+}
+@font-face {
+    font-family: body;
+    src: url(../../tipografias/GARA.TTF);
+}
+@font-face {
+    font-family: frases;
+    src: url(../../tipografias/Austhina\ Brush\ Calligraphy\ Scratch\ .ttf);
+}

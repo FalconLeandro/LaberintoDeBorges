@@ -1,0 +1,80 @@
+
+.espacios{
+    .contenedor-espacios{
+        font-family: body;
+        display: flex;
+        &:nth-child(even){
+            .espacios-descripcion{
+                //en las pares el texto se va a acomodar a la izq
+                order: -1;
+                @media screen and (max-width: 992px) {
+                    order: inherit;
+                }
+            }
+        }
+        .espacios-imagen{
+            width: 50%;
+            height: 100%;
+            position: relative;
+            @media screen and (max-width: 992px) {
+                width: 100%;
+            }
+            img{
+                padding: 7%;
+                width: 100%;
+                height: 500px;
+                object-fit: cover;
+            }
+            h2, h3{
+                transform: translate(-50%, -50%);
+                
+            }
+            #fontTitulo{
+                position: absolute;
+                font-family: titulos;
+                color: white;
+                top: 10%;
+                left: 40%;
+                @media screen and (min-width: 768px) and (max-width: 1024px) { //tablet
+                    left: 40%;
+                }
+                @media screen and (max-width: 992px) { //tablet chiquito mobile grande 
+                    left: 25%;
+                }
+                @media screen and (max-width: 772px) { //mobile chiquito
+                    left: 50%;
+                }
+                background-color: $color-primario;
+                padding: 10px 20px;
+            }
+            #fontFrase{
+                position: absolute;
+                font-family: frases;
+                color: white;
+                bottom: 8%;
+                left: 78%;
+                @media screen and (min-width: 768px) and (max-width: 1024px) { //tablet
+                    left: 77%;
+                }
+                @media screen and (max-width: 992px) { //tablet chiquito mobile grande 
+                    left: 85%;
+                }
+                @media screen and (max-width: 772px) { //mobile chiquito
+                    left: 50%;
+                }
+            }
+        }
+        .espacios-descripcion{
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            text-align: justify;
+            p{
+                padding: 7%;
+            }
+        }
+        
+    }
+    
+    
+}
