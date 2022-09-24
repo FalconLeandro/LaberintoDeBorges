@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Merriweather+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Source+Sans+Pro:ital,wght@0,300;1,300&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/media/GARAIT.TTF') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
 // $colors: #360745, #D61C59, #E7D84B, #EFEAC5, #1B8798;
 
 // BODY {
@@ -10,14 +19,17 @@
 // }
 
 // .text--line {
-//   font-size: .5em;
+//   font-size: .4em;
 //   }
 
 // svg {
-    
+//     background: rgba(0,0,0,.4);
+//   background-size: .12em 100%;
+//   font: 16em/1 Arial;
 //   position: absolute;
 //   width: 100%;
 //   height: 100%;
+//   z-index: 98;
 //   }
 
 // $max: 5;
@@ -27,12 +39,12 @@
 //   stroke: white;
 //   stroke-dasharray: $stroke-step $stroke-step * ($max - 1);
 //   stroke-width: 3px;
-  
-//   animation: stroke-offset 9s infinite linear;
-  
+
+//   animation: stroke-offset 8s linear, appear 8s cubic-bezier(.5, .74, .14, .99) forwards ;
+
 //   @for $item from 1 through $max {
 //     $stroke-color: nth($colors, $item);
-    
+
 //     &:nth-child(#{$item}) {
 //       stroke: $stroke-color;
 //       stroke-dashoffset: $stroke-step * $item;
@@ -47,34 +59,47 @@
 //   }
 // }
 
-#nav{
+.menu-nav {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     width: 100%;
     position: fixed;
     z-index: 100;
-    height: 55px;
-    background-color: rgba(0,0,0,0.7);
-    .social{
+    height: 70px;
+    transition: .7s ease-out;
+
+    &.scrolled {
+        height: 90px;
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    .social {
         left: 3%;
         position: absolute;
-        a i{
+
+        a i {
             font-size: 1em;
-            color: aliceblue;
+            color: #D0CCB3;
             margin: 0% 5px;
         }
-    }        
-    ul{
+    }
+
+    ul {
         display: flex;
         list-style: none;
-        font-size: .7em;
-        li{
-            padding: 0 5px;
-            a{
+        font-size: 1em;
+        padding-left: 0;
+        margin-bottom: 0;
+
+        li {
+            padding: 0 10px;
+
+            a {
                 // font-family: 'Merriweather Sans', sans-serif;
                 // font-family: 'Libre Baskerville', serif;
-                font-family: "Source Sans Pro", sans-serif;
+                // font-family: "Source Sans Pro", sans-serif;
+                font-family: 'Poiret One', cursive;
 
                 text-decoration: none;
                 color: white;
@@ -83,9 +108,72 @@
 
         }
     }
+
+    input {
+        display: none; //es el cuadrito del checkbox SIMEPRE invisible
+    }
+
+    label {
+        display: inline;
+
+        .btn {
+            display: none; //no quiero q sea vea el boton desktop
+            position: absolute; // le doy absolute para q no rompa en resp
+            width: 56px;
+            height: 43px;
+            right: 2.5rem;
+            top: 3.3rem;
+            cursor: pointer;
+
+
+            span {
+                display: block; //lo convierto en bloque
+                width: 100%; // ocupe el tamaño del papa(.btn) de 30px
+                height: 2px;
+                background: white;
+                margin-top: 6px;
+                transition: all 300ms;
+                transform-origin: 0px 100%; // lo mantiene pegado en en el padre
+
+                /*transformacion de la cruz*/
+                &.linea1active {
+                    transform: rotate(45deg) translate(-2px, 1px);
+                }
+
+                &.linea2active {
+                    //esta linea desaparece
+                    opacity: 0;
+                    margin-left: -30px;
+                }
+
+                &.linea3active {
+                    transform: rotate(-45deg) translate(-4px, 2px);
+                }
+
+                /* fin transformacion de la cruz*/
+            }
+
+            /*fin boton burguer*/
+        }
+
+        .btn:hover {
+            border: inherit;
+        }
+    }
 }
-header{
-    
+
+.shadow-layer {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(0deg, #0F0E0E,transparent, #0F0E0E);
+
+    z-index: 96;
+}
+
+header {
+
     position: relative;
     display: flex;
     flex-direction: column;
@@ -94,30 +182,52 @@ header{
     background-position: bottom;
     height: 100vh;
     width: 100%;
-    z-index: 95;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.7);
     overflow: hidden;
     transition: height 999999999s ease;
-    .header-video {
-        display: none;
-        position: absolute;
-        top: 0;
-        overflow: hidden;
-        width: -webkit-fill-available; 
-        z-index: 99;
-        video{
-            width: 100vw;
-            animation: appear;
 
-        }
-      }
-    
-    .images{
-        position: relative;
+    // .header-video {
+    //     // display: none;
+    //     position: absolute;
+    //     top: 0;
+    //     overflow: hidden;
+    //     width: -webkit-fill-available; 
+    //     z-index: 99;
+    //     video{
+    //         width: 100vw;
+    //         animation: appear 5s cubic-bezier(.5, .74, .14, .99) 15s forwards ;
+
+    //     }
+    //   }
+
+    .images {
         height: 100vh;
 
-        .scaling{
-            display: none;
+        .title {
+            position: absolute;
+            z-index: 99;
+            width: 30vw;
+            height: 30vh;
+            top: 50%;
+            left: 50%;
+            background: rgba(0, 0, 0, 0.6);
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-family: 'Poiret One', cursive;
+            color: #D0CCB3;
+            font-size: inherit;
+            opacity: 0;
+            animation: appear 5s cubic-bezier(.5, .74, .14, .99) 5s forwards;
+
+            H1 {
+                font-size: 6rem !important;
+
+
+            }
+        }
+
+        .scaling {
+            // display: none;
             background-image: url('../../media/Aereas\ 4.jpg');
             background-repeat: no-repeat;
             background-position: center;
@@ -127,53 +237,94 @@ header{
             position: absolute;
             z-index: 1;
             transition: height 999999999s ease;
+            animation: scaling 15s linear infinite alternate forwards;
 
-            animation-name: scaling;
-                animation-duration: 15s;
-                animation-timing-function: linear;
-                animation-fill-mode: forwards;
-            // .show{
-            //     animation-name: scaling;
-            //     animation-duration: 15s;
-            //     animation-timing-function: linear;
-            //     animation-fill-mode: forwards;
-            // }
         }
-        .appear{
-            position: absolute;
-            z-index: 2;
-            width: 100%;
-            height: 100vh;
-            .show{
-                animation-name: appear;
-                animation-duration: 15s;
-                animation-timing-function: cubic-bezier(.5, .74, .14, .99);
-                animation-fill-mode: forwards;
-            }
-        }
-        
-        
+
+
+
     }
-    
-    
-    
+
+
+
 
 }
 
 
-@keyframes scaling{
-    0%{
+@keyframes scaling {
+    0% {
         transform: scale(1);
     }
-    100%{
+
+    100% {
         transform: scale(1.2);
     }
 }
-@keyframes appear{
-    0%{
-        background:rgba(0,0,0,0.8);
+
+@keyframes appear {
+    0% {
+        opacity: 0;
     }
-    100%{
-        background:transparent;
+
+    100% {
+        opacity: 1;
     }
+}
+
+@media all and (max-width: 980px) {
+
+    nav {
+
+
+        ul {
+            display: flex;
+            padding: 28% 0%;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            position: fixed; // lo fijo en toda la pantalla por encima
+            top: 0vh; // ocupa toda la pantalla apartir de aca (nav)
+            width: 100%;
+            height: 100vh;
+            background-color: #3FB6B0;
+            z-index: 98; // lo pongo por encima de todo
+            left: 100%; //con esto lo escuendo para q luego aparezcs desde aca
+            transition: all 0.5s;
+
+            li {
+                display: block;
+                font-size: 2em;
+                padding-left: 0px;
+
+                a {
+                    color: #D3E4CD;
+
+                    &:active {
+                        color: #874F9D;
+                    }
+                }
+            }
+        }
+
+        // #menu-burguer:checked ~ body{
+        //     overflow: hidden; // le saco el scroll a toda la pagina
+        // }
+        #menu-burguer:checked~label .btn span {
+            background: #D3E4CD;
+        }
+
+        label .btn {
+            display: block !important;
+            right: 1.5rem;
+            top: 1.3rem;
+            z-index: 99;
+
+        }
+        
+    }
+
+    
+}
+.colapse{
+    left: 0;
 }

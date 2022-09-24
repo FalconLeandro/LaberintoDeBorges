@@ -42,8 +42,8 @@
 			<a href=""><i class="fa-brands fa-instagram"></i></a>
 			<a href=""><i class="fa-brands fa-facebook-f"></i></a>
 		</div>
-		<ul>
-			<li><a href="">HOME</a></li>
+		<ul class="menu">
+			<li><a href="">HOME</a> </li>
 			<li><a href="">EL LABERINTO</a></li>
 			<li><a href="">ESPACIOS</a></li>
 			<li><a href="">AGENDA</a></li>
@@ -52,25 +52,39 @@
 			<li><a href="">CONTACTO</a></li>
 		</ul>
 
+		<!--boton burguer-->             
+		<input type="checkbox" id="menu-burguer">
+		<label for="menu-burguer">
+			<div class="btn">
+				<span class="linea1"></span>
+				<span class="linea2"></span>
+				<span class="linea3"></span>
+			</div>
+		</label>
+		<!--fin boton burguer--> 
+		
 		<!-- implementar -->
 	</nav>
 
-	<header>
+	<div class="shadow-layer"></div>
+
+    <header>
+		
 		<div class="images">
-			<div class="scaling show">
-				<!--Inicio header-->
-				<!--Fin header-->
-			</div>
-			<div class="appear show"></div>
+			<div class="scaling">
+			</div>	
+			<!-- <div class="title">
+				<h1>EL LABERINTO<br/>DE BORGES</h1>
+			</div> -->
 		</div>
 
-		<div class="header-video">
-			<video autoplay="" muted="">
-				<source src="media/video-banner.mp4" />
+		<!-- <div class="header-video">
+			<video  autoplay="" muted="">
+				<source src="media/video-banner.mp4">
 			</video>
-		</div>
-
-		<svg viewBox="0 0 800 600">
+		</div> -->
+		
+		<!-- <svg viewBox="0 0 800 600">
 			<symbol id="s-text">
 				<text text-anchor="middle" x="50%" y="35%" class="text--line">
 					Laberinto
@@ -81,13 +95,19 @@
 			</symbol>
 
 			<g class="g-ants">
-				<use xlink:href="#s-text" class="text-copy"></use>
-				<use xlink:href="#s-text" class="text-copy"></use>
-				<use xlink:href="#s-text" class="text-copy"></use>
-				<use xlink:href="#s-text" class="text-copy"></use>
-				<use xlink:href="#s-text" class="text-copy"></use>
+			  <use xlink:href="#s-text"
+				class="text-copy"></use>     
+			  <use xlink:href="#s-text"
+				class="text-copy"></use>     
+			  <use xlink:href="#s-text"
+				class="text-copy"></use>     
+			  <use xlink:href="#s-text"
+				class="text-copy"></use>     
+			  <use xlink:href="#s-text"
+				class="text-copy"></use>     
 			</g>
-		</svg>
+
+		</svg> -->
 
 		<!--Inicio banner-->
 		<div class="banner">
@@ -467,6 +487,9 @@
 		<!-- implementar-->
 	</footer>
 
+	<script src="/js/header-scroll.js"></script>
+	<script src="/js/burguer.js"></script>
+
 	<!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P8CT3NP" height="0" width="0"
 			style="display: none; visibility: hidden"></iframe></noscript>
@@ -477,3 +500,5 @@
 </body>
 
 </html>
+
+
