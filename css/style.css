@@ -24,6 +24,15 @@ a {
   color: black;
 }
 
+.wap {
+  position: fixed;
+  height: 3rem;
+  width: 3rem;
+  bottom: 13px;
+  right: 13px;
+  z-index: 100;
+}
+
 .banner {
   padding: 5% 8%;
   display: flex;
@@ -105,7 +114,8 @@ header .header-video {
 }
 header .header-video video {
   width: 100vw;
-  animation: appear;
+  -webkit-animation: appear;
+          animation: appear;
 }
 header .images {
   position: relative;
@@ -122,10 +132,14 @@ header .images .scaling {
   position: absolute;
   z-index: 1;
   transition: height 999999999s ease;
-  animation-name: scaling;
-  animation-duration: 15s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
+  -webkit-animation-name: scaling;
+          animation-name: scaling;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 header .images .appear {
   position: absolute;
@@ -134,10 +148,23 @@ header .images .appear {
   height: 100vh;
 }
 header .images .appear .show {
-  animation-name: appear;
-  animation-duration: 15s;
-  animation-timing-function: cubic-bezier(0.5, 0.74, 0.14, 0.99);
-  animation-fill-mode: forwards;
+  -webkit-animation-name: appear;
+          animation-name: appear;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 0.74, 0.14, 0.99);
+          animation-timing-function: cubic-bezier(0.5, 0.74, 0.14, 0.99);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes scaling {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
 }
 
 @keyframes scaling {
@@ -146,6 +173,14 @@ header .images .appear .show {
   }
   100% {
     transform: scale(1.2);
+  }
+}
+@-webkit-keyframes appear {
+  0% {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  100% {
+    background: transparent;
   }
 }
 @keyframes appear {
@@ -177,6 +212,9 @@ header .images .appear .show {
   font-family: titulos;
 }
 
+.espacios {
+  background-color: #f5efd3;
+}
 .espacios .contenedor-espacios {
   font-family: body;
   display: flex;
@@ -203,7 +241,8 @@ header .images .appear .show {
   padding: 7%;
   width: 100%;
   height: 500px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .espacios .contenedor-espacios .espacios-imagen h2, .espacios .contenedor-espacios .espacios-imagen h3 {
   transform: translate(-50%, -50%);
@@ -238,6 +277,7 @@ header .images .appear .show {
   color: white;
   bottom: 8%;
   left: 78%;
+  /*         RAAAAAAAAAAAAARI            */
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .espacios .contenedor-espacios .espacios-imagen #fontFrase {
@@ -352,3 +392,59 @@ header .images .appear .show {
   border: 1px solid #8b1f31;
   background: orange;
 }
+
+.carousel-inner .carousel-item img {
+  width: 100%;
+  height: 100%;
+}
+.carousel-inner .carousel-item .carousel-caption {
+  background: rgb(141, 50, 58);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.3869922969) 100%);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 3rem;
+}
+.carousel-inner .carousel-item .carousel-caption h5 {
+  font-size: 3rem;
+  font-family: titulos;
+}
+.carousel-inner .carousel-item .carousel-caption p {
+  font-family: body;
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 772px) and (max-width: 1024px) {
+  .carousel-inner .carousel-item .carousel-caption {
+    padding: 1rem 7rem;
+  }
+  .carousel-inner .carousel-item .carousel-caption h5 {
+    font-size: 1.5rem;
+  }
+  .carousel-inner .carousel-item .carousel-caption p {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 772px) {
+  .carousel-inner .carousel-item .carousel-caption {
+    padding: 10px;
+  }
+  .carousel-inner .carousel-item .carousel-caption h5 {
+    font-size: 17px;
+  }
+  .carousel-inner .carousel-item .carousel-caption p {
+    font-size: 13px;
+  }
+}
+
+.carousel-control-prev, .carousel-control-next {
+  opacity: inherit;
+}
+
+.ubicacion {
+  background-color: #f5efd3;
+}
+
+.map {
+  width: 75%;
+  padding: 1rem;
+}/*# sourceMappingURL=style.css.map */

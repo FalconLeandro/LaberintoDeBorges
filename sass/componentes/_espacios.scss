@@ -1,5 +1,6 @@
 
 .espacios{
+    background-color: $color-secundario;
     .contenedor-espacios{
         font-family: body;
         display: flex;
@@ -53,6 +54,8 @@
                 color: white;
                 bottom: 8%;
                 left: 78%;
+
+                    /*         RAAAAAAAAAAAAARI            */
                 @media screen and (min-width: 768px) and (max-width: 1024px) { //tablet
                     left: 77%;
                 }
