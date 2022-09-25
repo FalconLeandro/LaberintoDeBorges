@@ -1,11 +1,14 @@
 
 .espacios{
-    background-color: #0d0204;
+    // background-color: #0d0204;
     .contenedor-espacios{
         font-family: body;
         display: flex;
+        height: 100vh;
         &:nth-child(even){
             .espacios-descripcion{
+                background: rgb(13,2,4);
+                background: linear-gradient(180deg, rgba(13,2,4,1) 0%, rgba(52,11,18,0.7371323529411764) 50%, rgba(13,2,4,1) 100%);
                 //en las pares el texto se va a acomodar a la izq
                 order: -1;
                 @media screen and (max-width: 992px) {
@@ -15,39 +18,22 @@
         }
         .espacios-imagen{
             width: 50%;
+            padding: 0;
             height: 100%;
             position: relative;
             @media screen and (max-width: 992px) {
                 width: 100%;
             }
             img{
-                padding: 7%;
                 width: 100%;
-                height: 500px;
+                height: 100vh;
                 object-fit: cover;
             }
             h2, h3{
                 transform: translate(-50%, -50%);
                 
             }
-            #fontTitulo{
-                position: absolute;
-                font-family: titulos;
-                color: white;
-                top: 10%;
-                left: 40%;
-                @media screen and (min-width: 768px) and (max-width: 1024px) { //tablet
-                    left: 40%;
-                }
-                @media screen and (max-width: 992px) { //tablet chiquito mobile grande 
-                    left: 25%;
-                }
-                @media screen and (max-width: 772px) { //mobile chiquito
-                    left: 50%;
-                }
-                background-color: $color-primario;
-                padding: 10px 20px;
-            }
+            
             #fontFrase{
                 position: absolute;
                 font-family: frases;
@@ -68,12 +54,22 @@
             }
         }
         .espacios-descripcion{
+            flex-direction: column;
             font-size: 1.5rem;
             display: flex;
-            align-items: center;
             text-align: justify;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 7%;
+            
+            #fontTitulo{
+                font-family: titulos;
+                color: $color-primario;
+                font-weight: 600;
+                font-size: xxx-large;
+            }
             p{
-                padding: 7%;
+                
                 color: gray;
             }
         }

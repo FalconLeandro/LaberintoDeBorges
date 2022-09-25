@@ -68,11 +68,16 @@
     z-index: 100;
     height: 70px;
     transition: .7s ease-out;
-
-    &.scrolled {
-        height: 90px;
-        background: rgba(13, 2, 4, 0.8);
+    
+    &.scroll-down  {
+        transform: translate3d(0, -100%, 0)
     }
+    &.scroll-up {
+      transform: none;
+      height: 90px;
+      background: rgba(13, 2, 4, 0.8);
+    }
+       
 
     .social {
         left: 3%;
@@ -102,7 +107,7 @@
                 font-family: 'Poiret One', cursive;
 
                 text-decoration: none;
-                color: white;
+                color: #D0CCB3;
                 letter-spacing: 1px;
             }
 
@@ -130,7 +135,7 @@
                 display: block; //lo convierto en bloque
                 width: 100%; // ocupe el tamaño del papa(.btn) de 30px
                 height: 2px;
-                background: white;
+                background: #D0CCB3;
                 margin-top: 6px;
                 transition: all 300ms;
                 transform-origin: 0px 100%; // lo mantiene pegado en en el padre

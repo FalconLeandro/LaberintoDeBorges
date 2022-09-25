@@ -76,7 +76,11 @@ a {
   height: 70px;
   transition: 0.7s ease-out;
 }
-.menu-nav.scrolled {
+.menu-nav.scroll-down {
+  transform: translate3d(0, -100%, 0);
+}
+.menu-nav.scroll-up {
+  transform: none;
   height: 90px;
   background: rgba(13, 2, 4, 0.8);
 }
@@ -102,7 +106,7 @@ a {
 .menu-nav ul li a {
   font-family: "Poiret One", cursive;
   text-decoration: none;
-  color: white;
+  color: #D0CCB3;
   letter-spacing: 1px;
 }
 .menu-nav input {
@@ -125,7 +129,7 @@ a {
   display: block;
   width: 100%;
   height: 2px;
-  background: white;
+  background: #D0CCB3;
   margin-top: 6px;
   transition: all 300ms;
   transform-origin: 0px 100%;
@@ -262,10 +266,12 @@ header .images .scaling {
 
 .intro {
   background-image: url("../../media/fondo.png");
+  background-size: contain;
   width: 100%;
   height: 100%;
+  position: relative;
   padding: 10%;
-  color: white;
+  color: #D0CCB3;
   font-family: body;
   text-align: center;
   display: flex;
@@ -273,22 +279,53 @@ header .images .scaling {
   justify-content: center;
   align-items: center;
 }
-.intro p {
+.intro .intro-shadow-layer {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  z-index: 2;
+  background: rgb(13, 2, 4);
+  background: linear-gradient(0deg, rgb(13, 2, 4) 0%, rgba(52, 11, 18, 0) 50%, rgb(13, 2, 4) 100%);
+}
+.intro .intro-container {
+  z-index: 2;
+}
+.intro .intro-container p {
   font-size: 1.2rem;
   padding-top: 5%;
 }
-.intro #fontTitulo {
+.intro .intro-container #fontTitulo {
   font-family: titulos;
 }
-
-.espacios {
-  background-color: #0d0204;
+.intro .intro-container .button {
+  background-color: #D0CCB3;
+  color: #480F19;
+  border: 2px solid #D0CCB3;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
 }
+.intro .intro-container .button:hover {
+  color: #D0CCB3;
+  background-color: transparent;
+}
+
 .espacios .contenedor-espacios {
   font-family: body;
   display: flex;
+  height: 100vh;
 }
 .espacios .contenedor-espacios:nth-child(even) .espacios-descripcion {
+  background: rgb(13, 2, 4);
+  background: linear-gradient(180deg, rgb(13, 2, 4) 0%, rgba(52, 11, 18, 0.7371323529) 50%, rgb(13, 2, 4) 100%);
   order: -1;
 }
 @media screen and (max-width: 992px) {
@@ -298,6 +335,7 @@ header .images .scaling {
 }
 .espacios .contenedor-espacios .espacios-imagen {
   width: 50%;
+  padding: 0;
   height: 100%;
   position: relative;
 }
@@ -307,37 +345,12 @@ header .images .scaling {
   }
 }
 .espacios .contenedor-espacios .espacios-imagen img {
-  padding: 7%;
   width: 100%;
-  height: 500px;
+  height: 100vh;
   object-fit: cover;
 }
 .espacios .contenedor-espacios .espacios-imagen h2, .espacios .contenedor-espacios .espacios-imagen h3 {
   transform: translate(-50%, -50%);
-}
-.espacios .contenedor-espacios .espacios-imagen #fontTitulo {
-  position: absolute;
-  font-family: titulos;
-  color: white;
-  top: 10%;
-  left: 40%;
-  background-color: #8d323a;
-  padding: 10px 20px;
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .espacios .contenedor-espacios .espacios-imagen #fontTitulo {
-    left: 40%;
-  }
-}
-@media screen and (max-width: 992px) {
-  .espacios .contenedor-espacios .espacios-imagen #fontTitulo {
-    left: 25%;
-  }
-}
-@media screen and (max-width: 772px) {
-  .espacios .contenedor-espacios .espacios-imagen #fontTitulo {
-    left: 50%;
-  }
 }
 .espacios .contenedor-espacios .espacios-imagen #fontFrase {
   position: absolute;
@@ -363,13 +376,21 @@ header .images .scaling {
   }
 }
 .espacios .contenedor-espacios .espacios-descripcion {
+  flex-direction: column;
   font-size: 1.5rem;
   display: flex;
-  align-items: center;
   text-align: justify;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 7%;
+}
+.espacios .contenedor-espacios .espacios-descripcion #fontTitulo {
+  font-family: titulos;
+  color: #8d323a;
+  font-weight: 600;
+  font-size: xxx-large;
 }
 .espacios .contenedor-espacios .espacios-descripcion p {
-  padding: 7%;
   color: gray;
 }
 
@@ -462,16 +483,17 @@ header .images .scaling {
   background: orange;
 }
 
+.carousel-inner {
+  height: 100vh;
+  overflow: hidden;
+}
+.carousel-inner .carousel-item {
+  height: inherit;
+}
 .carousel-inner .carousel-item img {
-  width: 100%;
   height: 100%;
 }
 .carousel-inner .carousel-item .carousel-caption {
-  background: rgb(141, 50, 58);
-  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.3869922969) 100%);
-  bottom: 0;
-  left: 0;
-  right: 0;
   padding: 3rem;
 }
 .carousel-inner .carousel-item .carousel-caption h5 {
