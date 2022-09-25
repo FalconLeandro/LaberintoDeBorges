@@ -1,5 +1,6 @@
 
 .espacios{
+    background-color: #0d0204;
     .contenedor-espacios{
         font-family: body;
         display: flex;
@@ -71,6 +72,7 @@
             text-align: justify;
             p{
                 padding: 7%;
+                color: gray;
             }
         }
         

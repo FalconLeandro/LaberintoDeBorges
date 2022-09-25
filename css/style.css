@@ -272,6 +272,9 @@ header .images .scaling {
   font-family: titulos;
 }
 
+.espacios {
+  background-color: #0d0204;
+}
 .espacios .contenedor-espacios {
   font-family: body;
   display: flex;
@@ -357,6 +360,7 @@ header .images .scaling {
 }
 .espacios .contenedor-espacios .espacios-descripcion p {
   padding: 7%;
+  color: gray;
 }
 
 .contacto {
