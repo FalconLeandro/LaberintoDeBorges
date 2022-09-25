@@ -185,7 +185,8 @@ header .images .title {
   color: #D0CCB3;
   font-size: inherit;
   opacity: 0;
-  animation: appear 5s cubic-bezier(0.5, 0.74, 0.14, 0.99) 5s forwards;
+  -webkit-animation: appear 5s cubic-bezier(0.5, 0.74, 0.14, 0.99) 5s forwards;
+          animation: appear 5s cubic-bezier(0.5, 0.74, 0.14, 0.99) 5s forwards;
 }
 header .images .title H1 {
   font-size: 6rem !important;
@@ -200,31 +201,8 @@ header .images .scaling {
   position: absolute;
   z-index: 1;
   transition: height 999999999s ease;
-<<<<<<< HEAD
-  -webkit-animation-name: scaling;
-          animation-name: scaling;
-  -webkit-animation-duration: 15s;
-          animation-duration: 15s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-header .images .appear {
-  position: absolute;
-  z-index: 2;
-  width: 100%;
-  height: 100vh;
-}
-header .images .appear .show {
-  -webkit-animation-name: appear;
-          animation-name: appear;
-  -webkit-animation-duration: 15s;
-          animation-duration: 15s;
-  -webkit-animation-timing-function: cubic-bezier(0.5, 0.74, 0.14, 0.99);
-          animation-timing-function: cubic-bezier(0.5, 0.74, 0.14, 0.99);
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  -webkit-animation: scaling 15s linear infinite alternate forwards;
+          animation: scaling 15s linear infinite alternate forwards;
 }
 
 @-webkit-keyframes scaling {
@@ -234,9 +212,6 @@ header .images .appear .show {
   100% {
     transform: scale(1.2);
   }
-=======
-  animation: scaling 15s linear infinite alternate forwards;
->>>>>>> 457c6cee3771f50b891629896e9748490ecad7db
 }
 
 @keyframes scaling {
@@ -248,6 +223,14 @@ header .images .appear .show {
   }
 }
 @-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes appear {
   0% {
     opacity: 0;
   }
