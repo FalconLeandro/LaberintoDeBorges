@@ -5,10 +5,11 @@
         font-family: body;
         display: flex;
         height: 100vh;
+        --bs-gutter-x: none;
         &:nth-child(even){
             .espacios-descripcion{
                 background: rgb(13,2,4);
-                background: linear-gradient(180deg, rgba(13,2,4,1) 0%, rgba(52,11,18,0.7371323529411764) 50%, rgba(13,2,4,1) 100%);
+                
                 //en las pares el texto se va a acomodar a la izq
                 order: -1;
                 @media screen and (max-width: 992px) {
@@ -57,7 +58,6 @@
             flex-direction: column;
             font-size: 1.5rem;
             display: flex;
-            text-align: justify;
             align-items: flex-start;
             justify-content: center;
             padding: 7%;

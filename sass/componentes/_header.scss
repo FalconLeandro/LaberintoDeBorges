@@ -105,10 +105,14 @@
                 // font-family: 'Libre Baskerville', serif;
                 // font-family: "Source Sans Pro", sans-serif;
                 font-family: 'Poiret One', cursive;
-
+                font-weight: bolder;
                 text-decoration: none;
                 color: #D0CCB3;
                 letter-spacing: 1px;
+                transition: all .5s ease-out;
+                &:hover{
+                    color: #8d323a;
+                }
             }
 
         }

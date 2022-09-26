@@ -105,9 +105,14 @@ a {
 }
 .menu-nav ul li a {
   font-family: "Poiret One", cursive;
+  font-weight: bolder;
   text-decoration: none;
   color: #D0CCB3;
   letter-spacing: 1px;
+  transition: all 0.5s ease-out;
+}
+.menu-nav ul li a:hover {
+  color: #8d323a;
 }
 .menu-nav input {
   display: none;
@@ -267,7 +272,7 @@ header .images .scaling {
 .intro {
   background-image: url("../../media/fondo.png");
   background-size: contain;
-  width: 100%;
+  width: 200%;
   height: 100%;
   position: relative;
   padding: 10%;
@@ -275,9 +280,13 @@ header .images .scaling {
   font-family: body;
   text-align: center;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: move 20s alternate infinite;
+}
+.intro .intro-empty {
+  width: 100%;
+  order: 2;
 }
 .intro .intro-shadow-layer {
   position: absolute;
@@ -285,8 +294,8 @@ header .images .scaling {
   height: inherit;
   position: absolute;
   z-index: 2;
-  background: rgb(13, 2, 4);
-  background: linear-gradient(0deg, rgb(13, 2, 4) 0%, rgba(52, 11, 18, 0) 50%, rgb(13, 2, 4) 100%);
+  background: rgb(52, 11, 18);
+  background: radial-gradient(circle, rgba(52, 11, 18, 0) 0%, rgb(52, 11, 18) 50%, rgb(13, 2, 4) 100%);
 }
 .intro .intro-container {
   z-index: 2;
@@ -318,14 +327,22 @@ header .images .scaling {
   background-color: transparent;
 }
 
+@keyframes move {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-500px);
+  }
+}
 .espacios .contenedor-espacios {
   font-family: body;
   display: flex;
   height: 100vh;
+  --bs-gutter-x: none;
 }
 .espacios .contenedor-espacios:nth-child(even) .espacios-descripcion {
   background: rgb(13, 2, 4);
-  background: linear-gradient(180deg, rgb(13, 2, 4) 0%, rgba(52, 11, 18, 0.7371323529) 50%, rgb(13, 2, 4) 100%);
   order: -1;
 }
 @media screen and (max-width: 992px) {
@@ -379,7 +396,6 @@ header .images .scaling {
   flex-direction: column;
   font-size: 1.5rem;
   display: flex;
-  text-align: justify;
   align-items: flex-start;
   justify-content: center;
   padding: 7%;
@@ -485,16 +501,23 @@ header .images .scaling {
 
 .carousel-inner {
   height: 100vh;
-  overflow: hidden;
+  background: rgb(13, 2, 4);
 }
 .carousel-inner .carousel-item {
   height: inherit;
 }
+.carousel-inner .carousel-item .shadow-layer {
+  z-index: 0;
+}
 .carousel-inner .carousel-item img {
   height: 100%;
+  margin: auto;
+}
+.carousel-inner .carousel-item .w-100 {
+  width: auto !important;
 }
 .carousel-inner .carousel-item .carousel-caption {
-  padding: 3rem;
+  padding: 0 5%;
 }
 .carousel-inner .carousel-item .carousel-caption h5 {
   font-size: 3rem;
@@ -529,13 +552,24 @@ header .images .scaling {
 
 .carousel-control-prev, .carousel-control-next {
   opacity: inherit;
+  width: 8%;
+}
+.carousel-control-prev .carousel-control-prev-icon, .carousel-control-prev .carousel-control-next-icon, .carousel-control-next .carousel-control-prev-icon, .carousel-control-next .carousel-control-next-icon {
+  border: transparent solid 3px;
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  transition: all 0.3s ease-in;
+}
+.carousel-control-prev .carousel-control-prev-icon:hover, .carousel-control-prev .carousel-control-next-icon:hover, .carousel-control-next .carousel-control-prev-icon:hover, .carousel-control-next .carousel-control-next-icon:hover {
+  border: white solid 2px;
 }
 
 .ubicacion {
-  background-color: #f5efd3;
+  background-color: rgb(13, 2, 4);
 }
 
 .map {
-  width: 75%;
-  padding: 1rem;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

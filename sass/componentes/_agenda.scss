@@ -1,16 +1,24 @@
 .carousel-inner{
     height: 100vh;
-    overflow: hidden;
+    background: rgb(13,2,4);
     .carousel-item{
         height: inherit;
+        .shadow-layer{
+            z-index: 0;
+        }
       img{
             height: 100%;
+            margin: auto;
+
+        }
+        .w-100{
+            width: auto!important;
+            
         }
         .carousel-caption{
-            // background: rgb(141,50,58);
-            // background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.38699229691876746) 100%);
             
-            padding: 3rem;
+            
+            padding: 0 5%;
             h5{
                 font-size:3rem;
                 font-family: titulos;
@@ -43,4 +51,17 @@
 }
 .carousel-control-prev, .carousel-control-next{
     opacity: inherit;
+    width: 8%;
+    .carousel-control-prev-icon,.carousel-control-next-icon{
+        border:transparent solid 3px;
+        font-size: 2rem;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        transition: all .3s ease-in;
+        &:hover{
+            border:white solid 2px;
+        
+        }
+    }
 }
