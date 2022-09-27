@@ -1,7 +1,7 @@
 .intro{
     background-image: url('../../media/fondo.png');
     background-size: contain;
-    width: 200%;
+    width: 100%;
     height: 100%;
     position: relative;
     padding: 10%;
@@ -12,7 +12,7 @@
     
     justify-content: center;
     align-items: center;
-    animation: move 20s alternate infinite;
+    // animation: move 20s alternate infinite;
     .intro-empty{
         width: 100%;
         order: 2;
@@ -39,9 +39,9 @@
         }
         
         .button {
+            color: #D0CCB3;
+            background-color: transparent;
             
-            background-color: #D0CCB3;
-            color: #480F19;
             // color: white;
             // background-color: transparent;
             border: 2px solid #D0CCB3;
@@ -60,18 +60,19 @@
         .button:hover {
             // background-color: white;
             // color: #480F19;
-            color: #D0CCB3;
-            background-color: transparent;
+            background-color: #D0CCB3;
+            color: #480F19;
+            font-weight: 600;
         }
     }
     
     
 }
-@keyframes move {
-    0% {
-      transform: translateX(0px);
-    }
-    100% {
-        transform: translateX(-500px);
-    }
-}
+// @keyframes move {
+//     0% {
+//       transform: translateX(0px);
+//     }
+//     100% {
+//         transform: translateX(-500px);
+//     }
+// }

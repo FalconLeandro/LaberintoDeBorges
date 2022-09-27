@@ -272,7 +272,7 @@ header .images .scaling {
 .intro {
   background-image: url("../../media/fondo.png");
   background-size: contain;
-  width: 200%;
+  width: 100%;
   height: 100%;
   position: relative;
   padding: 10%;
@@ -282,7 +282,6 @@ header .images .scaling {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: move 20s alternate infinite;
 }
 .intro .intro-empty {
   width: 100%;
@@ -308,8 +307,8 @@ header .images .scaling {
   font-family: titulos;
 }
 .intro .intro-container .button {
-  background-color: #D0CCB3;
-  color: #480F19;
+  color: #D0CCB3;
+  background-color: transparent;
   border: 2px solid #D0CCB3;
   padding: 16px 32px;
   text-align: center;
@@ -323,18 +322,11 @@ header .images .scaling {
   cursor: pointer;
 }
 .intro .intro-container .button:hover {
-  color: #D0CCB3;
-  background-color: transparent;
+  background-color: #D0CCB3;
+  color: #480F19;
+  font-weight: 600;
 }
 
-@keyframes move {
-  0% {
-    transform: translateX(0px);
-  }
-  100% {
-    transform: translateX(-500px);
-  }
-}
 .espacios .contenedor-espacios {
   font-family: body;
   display: flex;
