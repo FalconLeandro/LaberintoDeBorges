@@ -4,7 +4,6 @@
     .contenedor-espacios{
         font-family: body;
         display: flex;
-        height: 100vh;
         --bs-gutter-x: none;
         &:nth-child(even){
             .espacios-descripcion{
@@ -41,17 +40,6 @@
                 color: white;
                 bottom: 8%;
                 left: 78%;
-
-                    /*         RAAAAAAAAAAAAARI            */
-                @media screen and (min-width: 768px) and (max-width: 1024px) { //tablet
-                    left: 77%;
-                }
-                @media screen and (max-width: 992px) { //tablet chiquito mobile grande 
-                    left: 85%;
-                }
-                @media screen and (max-width: 772px) { //mobile chiquito
-                    left: 50%;
-                }
             }
         }
         .espacios-descripcion{
