@@ -21,5 +21,5 @@ window.addEventListener("scroll", () => {
     header.classList.remove(scrollDown);
     header.classList.add(scrollUp);
   }
-  lastScroll = currentScroll+10;
+  lastScroll = currentScroll;
 });
