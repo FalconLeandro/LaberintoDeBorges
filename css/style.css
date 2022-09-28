@@ -194,7 +194,8 @@ header .images .title {
   color: #D0CCB3;
   font-size: inherit;
   opacity: 0;
-  animation: appear 5s cubic-bezier(0.5, 0.74, 0.14, 0.99) 5s forwards;
+  -webkit-animation: appear 5s cubic-bezier(0.5, 0.74, 0.14, 0.99) 5s forwards;
+          animation: appear 5s cubic-bezier(0.5, 0.74, 0.14, 0.99) 5s forwards;
 }
 header .images .title H1 {
   font-size: 6rem !important;
@@ -209,7 +210,17 @@ header .images .scaling {
   position: absolute;
   z-index: 1;
   transition: height 999999999s ease;
-  animation: scaling 15s linear infinite alternate forwards;
+  -webkit-animation: scaling 15s linear infinite alternate forwards;
+          animation: scaling 15s linear infinite alternate forwards;
+}
+
+@-webkit-keyframes scaling {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
 }
 
 @keyframes scaling {
@@ -218,6 +229,14 @@ header .images .scaling {
   }
   100% {
     transform: scale(1.2);
+  }
+}
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 @keyframes appear {
@@ -316,8 +335,7 @@ header .images .scaling {
   text-transform: uppercase;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
-  -webkit-transition-duration: 0.4s; /* Safari */
+  margin: 4px 2px; /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;
 }
@@ -359,7 +377,9 @@ header .images .scaling {
 .espacios .contenedor-espacios .espacios-imagen img {
   width: 100%;
   height: 100vh;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.4);
 }
 .espacios .contenedor-espacios .espacios-imagen h2, .espacios .contenedor-espacios .espacios-imagen h3 {
   transform: translate(-50%, -50%);
@@ -644,4 +664,32 @@ footer .contact-right .ubicacion iframe {
 }
 .carousel-control-prev .carousel-control-prev-icon:hover, .carousel-control-prev .carousel-control-next-icon:hover, .carousel-control-next .carousel-control-prev-icon:hover, .carousel-control-next .carousel-control-next-icon:hover {
   border: white solid 2px;
+}
+
+.gallery {
+  height: 50vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+.gallery div {
+  flex-shrink: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+.gallery div img {
+  height: auto;
+  width: 100%;
+}
+.gallery div .descripcion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #8d323a;
+  color: whitesmoke;
 }/*# sourceMappingURL=style.css.map */

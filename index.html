@@ -29,6 +29,8 @@
 		integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
 	<!-- Parallax -->
 		<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+	<!-- Slider -->
+	<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/style.css" />
 
@@ -321,7 +323,58 @@
 		<!--Inicio sección agenda-->
 		<section class="agenda">
 
-			<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+
+
+			<div class="gallery">
+				<div>
+					<img src="./media/agenda/tardecitas.jpg" alt="">
+					<div class="descripcion">
+						<h5>Tardecitas de té</h5>
+						<p>Para degustar los más ricos sabores artesanales mientras nos acompaña el color y la sensación de un bello atardecer.</p>
+					</div>
+					
+				</div>
+				<div>
+					<img src="./media/agenda/degustaciones.jpg" alt="">
+					<div class="descripcion">
+						<h5>Degustaciones</h5>
+						<p>CompartÍ un momento agradable con vinos de calidad y experimentá diversas sensaciones, aromas y sabores.</p>
+					</div>
+				</div>
+				<div>
+					<img src="./media/agenda/shows.jpg" alt=""> 
+					<div class="descripcion">
+						<h5>Shows artísticos y eventos</h5>
+						<p>Durante las diferentes estaciones del año ofrecemos diversas atracciones como: música en vivo, feria de los artesanos y la peña folklórica Sabor Cuyano.</p>
+					</div>
+					
+				</div>
+			</div>
+
+
+
+			<!-- <div class="swiffy-slider">
+				<ul class="slider-container">
+					<li><img src="./media/agenda/tardecitas.jpg" style="max-width: 100%;height: auto;">
+					<p>hola</p>
+					</li>
+					<li><img src="./media/agenda/degustaciones.jpg" style="max-width: 100%;height: auto;"></li>
+					<li><img src="./media/agenda/shows.jpg" style="max-width: 100%;height: auto;"></li>
+				</ul>
+			
+				<button type="button" class="slider-nav"></button>
+				<button type="button" class="slider-nav slider-nav-next"></button>
+			
+				<div class="slider-indicators">
+					<button class="active"></button>
+					<button></button>
+					<button></button>
+				</div>
+			</div> -->
+
+
+
+			<!-- <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
 				<div class="carousel-inner">
 					<div class="carousel-item active">
 						<div class="shadow-layer"></div>
@@ -355,7 +408,7 @@
 				<a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
 					<span class="carousel-control-next-icon" aria-hidden="true"></span>
 				</a>
-			</div>
+			</div> -->
 		</section>
 		<!--Fin sección agenda-->
 
@@ -483,7 +536,15 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<!-- Parallax -->
 	<script src="./js/parallax.js"></script>
-
+	<!-- Slider -->
+	<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+	<!-- ScrollMagic -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.js" integrity="sha512-UgS0SVyy/0fZ0i48Rr7gKpnP+Jio3oC7M4XaKP3BJUB/guN6Zr4BjU0Hsle0ey2HJvPLHE5YQCXTDrx27Lhe7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="js/scrollmagic/uncompressed/ScrollMagic.js"></script>
+	<script src="js/scrollmagic/minified/ScrollMagic.min.js"></script>
+	<script src="js/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js" integrity="sha512-judXDFLnOTJsUwd55lhbrX3uSoSQSOZR6vNrsll+4ViUFv+XOIr/xaIK96soMj6s5jVszd7I97a0H+WhgFwTEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>
