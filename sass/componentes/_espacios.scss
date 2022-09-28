@@ -1,14 +1,15 @@
 
 .espacios{
     // background-color: #0d0204;
+    background-color: antiquewhite;
+    color: gray;
     .contenedor-espacios{
         font-family: body;
         display: flex;
         --bs-gutter-x: none;
         &:nth-child(even){
             .espacios-descripcion{
-                background: rgb(13,2,4);
-                
+                background-color: antiquewhite;
                 //en las pares el texto se va a acomodar a la izq
                 order: -1;
                 @media screen and (max-width: 992px) {
@@ -31,7 +32,6 @@
             }
             h2, h3{
                 transform: translate(-50%, -50%);
-                
             }
             
             #fontFrase{
@@ -56,9 +56,14 @@
                 font-weight: 600;
                 font-size: xxx-large;
             }
-            p{
-                
-                color: gray;
+            @media screen and (max-width: 992px) {
+                align-items: center;
+                #fontTitulo{
+                    font-size: x-large;
+                }
+                p{
+                    font-size: 15px;
+                }
             }
         }
         
