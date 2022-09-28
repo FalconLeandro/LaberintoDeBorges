@@ -2,6 +2,7 @@
 .espacios{
     // background-color: #0d0204;
     background-color: antiquewhite;
+    color: gray;
     .contenedor-espacios{
         font-family: body;
         display: flex;
@@ -54,9 +55,6 @@
                 color: $color-primario;
                 font-weight: 600;
                 font-size: xxx-large;
-            }
-            p{
-                color: gray;
             }
             @media screen and (max-width: 992px) {
                 align-items: center;

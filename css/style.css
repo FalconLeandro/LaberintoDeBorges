@@ -345,6 +345,10 @@ header .images .scaling {
   font-weight: 600;
 }
 
+.espacios {
+  background-color: antiquewhite;
+  color: gray;
+}
 .espacios .contenedor-espacios {
   font-family: body;
   display: flex;
@@ -399,9 +403,6 @@ header .images .scaling {
   color: #8d323a;
   font-weight: 600;
   font-size: xxx-large;
-}
-.espacios .contenedor-espacios .espacios-descripcion p {
-  color: gray;
 }
 @media screen and (max-width: 992px) {
   .espacios .contenedor-espacios .espacios-descripcion {
