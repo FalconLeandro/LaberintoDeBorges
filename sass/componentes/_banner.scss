@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Source+Sans+Pro:ital,wght@0,300;1,300&display=swap');
 .banner{
-    padding: 5% 8%;
+    padding: 2% 8%;
     // position: absolute;
     // left: calc(50% - 438px/2);
     // top: calc(50% - 238px/2);
@@ -44,6 +44,7 @@
         display: contents;
         img{
             width: 25%;
+            margin-bottom: 3%;
             @media (max-width: 480px) {
                 width: 40%;
             }

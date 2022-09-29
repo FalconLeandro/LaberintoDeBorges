@@ -49,7 +49,7 @@ body {
 }
 
 .banner {
-  padding: 5% 8%;
+  padding: 2% 8%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -95,6 +95,7 @@ body {
 }
 .banner .logo img {
   width: 25%;
+  margin-bottom: 3%;
 }
 @media (max-width: 480px) {
   .banner .logo img {
@@ -177,7 +178,7 @@ body {
   width: 56px;
   height: 43px;
   right: 2.5rem;
-  top: 0.7rem;
+  top: 1.7rem;
   cursor: pointer;
   /*fin boton burguer*/
 }
@@ -309,7 +310,7 @@ header .images .scaling {
     top: 0vh;
     width: 100%;
     height: 100vh;
-    background-color: #3FB6B0;
+    background-color: #8d323a;
     z-index: 98;
     left: 100%;
     transition: all 0.5s;
@@ -326,7 +327,7 @@ header .images .scaling {
     color: #874F9D;
   }
   nav #menu-burguer:checked ~ label .btn span {
-    background: #D3E4CD;
+    background-color: #8d323a;
   }
   nav label .btn {
     display: block !important;
