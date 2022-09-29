@@ -22,23 +22,3 @@ function parallaxEspacios(){
 parallaxEspacios();
 
 
-$(function () {
-  
-  var controller = new ScrollMagic.Controller();
-  var horizontalSlide = new TimelineMax()
-  .to("#js-slideContainer", 1,   {x: "-20%"}) 
-  .to("#js-slideContainer", 1,   {x: "-40%"})
-  .to("#js-slideContainer", 1,   {x: "-60%"})
-  .to("#js-slideContainer", 1,   {x: "-80%"})
-
-  new ScrollMagic.Scene({
-    triggerElement: "#js-wrapper",
-    triggerHook: "onLeave",
-    duration: "400%"
-  })
-  .setPin("#js-wrapper")
-  .setTween(horizontalSlide)
-  .addTo(controller);
-  
-});
-
