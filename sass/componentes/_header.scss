@@ -88,6 +88,10 @@
             color: #D0CCB3;
             margin: 0% 5px;
         }
+        img{
+            height: 1rem;
+            margin-top: -5%;
+        }
     }
 
     ul {
@@ -131,7 +135,7 @@
             width: 56px;
             height: 43px;
             right: 2.5rem;
-            top: 3.3rem;
+            top: 0.7rem;
             cursor: pointer;
 
 
@@ -228,7 +232,7 @@ header {
             opacity: 0;
             animation: appear 5s cubic-bezier(.5, .74, .14, .99) 5s forwards;
 
-            H1 {
+            h1 {
                 font-size: 6rem !important;
 
 

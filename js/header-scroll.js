@@ -7,7 +7,7 @@ const body = document.body;
 
 window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset;
-  if (currentScroll ==0) {
+  if (currentScroll == 0) {
     header.classList.remove(scrollUp);
     return;
   }

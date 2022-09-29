@@ -2,7 +2,11 @@
     position: fixed;
     height: 3rem;
     width: 3rem;
-    bottom: 13px;
-    right: 13px;
+    bottom: 2rem;
+    right: 2rem;
     z-index: 100;
+    @media (max-width: 992px)  {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
 }

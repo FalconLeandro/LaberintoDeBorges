@@ -25,13 +25,27 @@ a {
   color: black;
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
 .wap {
   position: fixed;
   height: 3rem;
   width: 3rem;
-  bottom: 13px;
-  right: 13px;
+  bottom: 2rem;
+  right: 2rem;
   z-index: 100;
+}
+@media (max-width: 992px) {
+  .wap {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }
 
 .banner {
@@ -48,16 +62,49 @@ a {
   font-size: 3.5em;
   font-weight: bold;
 }
-
-.logo img {
-  width: 270px;
+@media (max-width: 992px) {
+  .banner .sentidos .p1 {
+    font-size: 2.3rem;
+  }
 }
-
-.p2 {
+.banner .sentidos .p2 {
   font-family: "Source Sans Pro", sans-serif;
   font-family: "Poiret One", cursive;
   font-size: 1.5em;
   color: #D0CCB3;
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .banner .sentidos .p2 {
+    font-size: 23px;
+  }
+}
+@media (max-width: 480px) {
+  .banner .sentidos .p2 {
+    font-size: 19px;
+  }
+}
+@media (max-width: 769px) {
+  .banner .sentidos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.banner .logo {
+  display: contents;
+}
+.banner .logo img {
+  width: 25%;
+}
+@media (max-width: 480px) {
+  .banner .logo img {
+    width: 40%;
+  }
+}
+@media (max-width: 769px) {
+  .banner {
+    flex-direction: column;
+  }
 }
 
 @font-face {
@@ -93,6 +140,10 @@ a {
   color: #D0CCB3;
   margin: 0% 5px;
 }
+.menu-nav .social img {
+  height: 1rem;
+  margin-top: -5%;
+}
 .menu-nav ul {
   display: flex;
   list-style: none;
@@ -126,7 +177,7 @@ a {
   width: 56px;
   height: 43px;
   right: 2.5rem;
-  top: 3.3rem;
+  top: 0.7rem;
   cursor: pointer;
   /*fin boton burguer*/
 }
@@ -197,7 +248,7 @@ header .images .title {
   -webkit-animation: appear 5s cubic-bezier(0.5, 0.74, 0.14, 0.99) 5s forwards;
           animation: appear 5s cubic-bezier(0.5, 0.74, 0.14, 0.99) 5s forwards;
 }
-header .images .title H1 {
+header .images .title h1 {
   font-size: 6rem !important;
 }
 header .images .scaling {

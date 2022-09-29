@@ -175,7 +175,8 @@ header .images .title {
   color: #D0CCB3;
   font-size: inherit;
   opacity: 0;
-  animation: appear 5s cubic-bezier(0.5, 0.74, 0.14, 0.99) 5s forwards;
+  -webkit-animation: appear 5s cubic-bezier(0.5, 0.74, 0.14, 0.99) 5s forwards;
+          animation: appear 5s cubic-bezier(0.5, 0.74, 0.14, 0.99) 5s forwards;
 }
 header .images .title H1 {
   font-size: 6rem !important;
@@ -190,7 +191,17 @@ header .images .scaling {
   position: absolute;
   z-index: 1;
   transition: height 999999999s ease;
-  animation: scaling 15s linear infinite alternate forwards;
+  -webkit-animation: scaling 15s linear infinite alternate forwards;
+          animation: scaling 15s linear infinite alternate forwards;
+}
+
+@-webkit-keyframes scaling {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
 }
 
 @keyframes scaling {
@@ -199,6 +210,14 @@ header .images .scaling {
   }
   100% {
     transform: scale(1.2);
+  }
+}
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 @keyframes appear {
@@ -341,6 +360,7 @@ section:not(:first-child), footer {
 */
 .section-grid {
   display: grid;
+  grid-template-rows: -webkit-min-content 1fr;
   grid-template-rows: min-content 1fr;
   grid-column-gap: 20px;
   margin-bottom: 100px;
@@ -425,6 +445,7 @@ section:not(:first-child), footer {
   grid-column: 2;
   grid-row: 1/2;
   align-self: end;
+  position: -webkit-sticky;
   position: sticky;
   top: 150px;
   z-index: 5;
@@ -434,13 +455,15 @@ section:not(:first-child), footer {
   grid-column: 1;
   grid-row: 3/10;
   align-self: start;
+  position: -webkit-sticky;
   position: sticky;
   top: 100px;
 }
 
 #image_three {
   max-height: 75vh;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .life_mask-div {
@@ -450,6 +473,7 @@ section:not(:first-child), footer {
   align-self: start;
   height: 100vh;
   width: 100%;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 3;
