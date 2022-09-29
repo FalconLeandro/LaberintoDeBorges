@@ -4,41 +4,98 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CDN font-awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+  integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
     <link rel="stylesheet" href="../sass/css/historia.css">
     <title>Historia</title>
 </head>
 <body>
-    <header>
-      <!-- <div class="logo_div">
-        <a href="#" class="logo_link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 968 968">
-    <defs/>
-    <path fill="currentColor" id="fir" d="M192 437a198 198 0 000 284c9 8 22 8 30 0a198 198 0 000-284c-8-8-21-8-30 0zM390 687c-56 0-106 23-142 60-8 8-8 21 0 29a198 198 0 00284 0c8-8 8-21 0-29-37-37-87-60-142-60zM336 293a198 198 0 000 284c8 8 21 8 29 0a198 198 0 000-284c-8-8-21-8-29 0zM675 603a198 198 0 00-284 0c-8 8-8 21 0 30a198 198 0 00284 0c8-9 8-22 0-30zM509 150c-8-8-21-8-30 0a198 198 0 000 284c9 8 22 8 30 0a198 198 0 000-284zM677 400c-56 0-106 23-142 60-8 8-8 21 0 29a198 198 0 00284 0c8-8 8-21 0-29-37-37-87-60-142-60zM652 7c-8-8-21-8-29 0a198 198 0 000 283c8 8 21 8 29 0a198 198 0 000-283zM820 257c-55 0-106 22-142 59-8 8-8 21 0 30a198 198 0 00284 0c8-9 8-22 0-30-36-36-86-59-142-59zM802 62c-40 39-59 91-59 142 1 12 10 21 21 21A198 198 0 00965 24c0-11-10-20-21-20-51-1-103 19-142 58zM21 959c12 11 31 11 43 0l138-138c11-12 11-31 0-42l-13-13a30 30 0 00-43 0L9 904a30 30 0 000 42l12 13z"/>
-  </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 968 968">
-    <defs/>
-    <path fill="currentColor" id="fir" d="M192 437a198 198 0 000 284c9 8 22 8 30 0a198 198 0 000-284c-8-8-21-8-30 0zM390 687c-56 0-106 23-142 60-8 8-8 21 0 29a198 198 0 00284 0c8-8 8-21 0-29-37-37-87-60-142-60zM336 293a198 198 0 000 284c8 8 21 8 29 0a198 198 0 000-284c-8-8-21-8-29 0zM675 603a198 198 0 00-284 0c-8 8-8 21 0 30a198 198 0 00284 0c8-9 8-22 0-30zM509 150c-8-8-21-8-30 0a198 198 0 000 284c9 8 22 8 30 0a198 198 0 000-284zM677 400c-56 0-106 23-142 60-8 8-8 21 0 29a198 198 0 00284 0c8-8 8-21 0-29-37-37-87-60-142-60zM652 7c-8-8-21-8-29 0a198 198 0 000 283c8 8 21 8 29 0a198 198 0 000-283zM820 257c-55 0-106 22-142 59-8 8-8 21 0 30a198 198 0 00284 0c8-9 8-22 0-30-36-36-86-59-142-59zM802 62c-40 39-59 91-59 142 1 12 10 21 21 21A198 198 0 00965 24c0-11-10-20-21-20-51-1-103 19-142 58zM21 959c12 11 31 11 43 0l138-138c11-12 11-31 0-42l-13-13a30 30 0 00-43 0L9 904a30 30 0 000 42l12 13z"/>
-  </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 968 968">
-    <defs/>
-    <path fill="currentColor" id="fir" d="M192 437a198 198 0 000 284c9 8 22 8 30 0a198 198 0 000-284c-8-8-21-8-30 0zM390 687c-56 0-106 23-142 60-8 8-8 21 0 29a198 198 0 00284 0c8-8 8-21 0-29-37-37-87-60-142-60zM336 293a198 198 0 000 284c8 8 21 8 29 0a198 198 0 000-284c-8-8-21-8-29 0zM675 603a198 198 0 00-284 0c-8 8-8 21 0 30a198 198 0 00284 0c8-9 8-22 0-30zM509 150c-8-8-21-8-30 0a198 198 0 000 284c9 8 22 8 30 0a198 198 0 000-284zM677 400c-56 0-106 23-142 60-8 8-8 21 0 29a198 198 0 00284 0c8-8 8-21 0-29-37-37-87-60-142-60zM652 7c-8-8-21-8-29 0a198 198 0 000 283c8 8 21 8 29 0a198 198 0 000-283zM820 257c-55 0-106 22-142 59-8 8-8 21 0 30a198 198 0 00284 0c8-9 8-22 0-30-36-36-86-59-142-59zM802 62c-40 39-59 91-59 142 1 12 10 21 21 21A198 198 0 00965 24c0-11-10-20-21-20-51-1-103 19-142 58zM21 959c12 11 31 11 43 0l138-138c11-12 11-31 0-42l-13-13a30 30 0 00-43 0L9 904a30 30 0 000 42l12 13z"/>
-        </svg><span class="dr_txt">Dr.</span>Norman Borlaug
-        </a>
-      </div>
-      <nav class="main_menu">
-        <ul>
-          <li><a href="#georgie" id="menu_links">Georgie y Susana</a></li>
-          <li><a href="#coate" id="menu_links">Randoll Coate</a></li>
-          <li><a href="#laberinto" id="menu_links">El laberinto</a></li>
-        </ul>
-      </nav> -->
+    <!--Inicio pop-up-->
+	<a href="https://wa.me/5492604638780?text=Hola,%20queria%20hacer%20una%20consulta"><img src="../media/wap.png" class="wap" alt="whatsapp"></a>
+	<!--Fin pop-up-->
+	<nav class="menu-nav">
+		<div class="social">
+			<a href=""><i class="fa-brands fa-instagram"></i></a>
+			<a href=""><i class="fa-brands fa-facebook-f"></i></a>
+		</div>
+		<ul class="menu">
+			<li><a href="../index.html">HOME</a> </li>
+			<li><a href="">EL LABERINTO</a></li>
+			<li><a href="">ESPACIOS</a></li>
+			<li><a href="">AGENDA</a></li>
+			<!-- <li><a href="">TIENDA</a></li>
+			<li><a href="">UBICACIÓN</a></li> -->
+			<li><a href="">CONTACTO</a></li>
+		</ul>
 
-      <div class="logo_div">
-				<img src="media/logo3.png" alt="" class="logo_link" viewBox="0 0 968 968" />
-				<!-- <p class="p2">San Rafael - Mendoza</p> -->
+		<!--boton burguer-->             
+		<input type="checkbox" id="menu-burguer">
+		<label for="menu-burguer">
+			<div class="btn">
+				<span class="linea1"></span>
+				<span class="linea2"></span>
+				<span class="linea3"></span>
 			</div>
+		</label>
+		<!--fin boton burguer--> 
+		
+		<!-- implementar -->
+	</nav>
 
+	<div class="shadow-layer"></div>
 
+    <header>
+		
+		<div class="images">
+			<div class="scaling">
+			</div>	
+			<!-- <div class="title">
+				<h1>EL LABERINTO<br/>DE BORGES</h1>
+			</div> -->
+		</div>
 
+		<!-- <div class="header-video">
+			<video  autoplay="" muted="">
+				<source src="media/video-banner.mp4">
+			</video>
+		</div> -->
+		
+		<!-- <svg viewBox="0 0 800 600">
+			<symbol id="s-text">
+				<text text-anchor="middle" x="50%" y="35%" class="text--line">
+					Laberinto
+				</text>
+				<text text-anchor="middle" x="30%" y="68%" class="text--line2">
+					de Borges
+				</text>
+			</symbol>
 
-    </header>
+			<g class="g-ants">
+			  <use xlink:href="#s-text"
+				class="text-copy"></use>     
+			  <use xlink:href="#s-text"
+				class="text-copy"></use>     
+			  <use xlink:href="#s-text"
+				class="text-copy"></use>     
+			  <use xlink:href="#s-text"
+				class="text-copy"></use>     
+			  <use xlink:href="#s-text"
+				class="text-copy"></use>     
+			</g>
+
+		</svg> -->
+
+		<!--Inicio banner-->
+		<div class="banner">
+			
+		</div>
+		<!--Fin banner-->
+	</header>
 
     <main id="main">
       <section id="hero" class="section-grid hero_grid">
@@ -57,8 +114,8 @@
             <span class="display_block display_none">Se reunian en la Quinta "San domenico" donde formaron un grupo de lectura de poemas y cuentos. Y en el departamento de Susana, en Recoleta, a tomar el te o almorzar.</span>
         </p>
         <figure id="img-div_about" class="about_img-div">
-          <img id="image_two" class="image" loading="lazy" src="https://live.staticflickr.com/4063/4578621620_2406d04761_b.jpg" alt="Dr. Norman Borlaug seen standing in a wheat field taking notes" width="440" height="625.76"/>
-          <figcaption id="img-caption_two" class="img-caption">Dr. Norman Borlaug seen standing in wheat field taking notes.
+          <img id="image_two" class="image" loading="lazy" src="https://live.staticflickr.com/4063/4578621620_2406d04761_b.jpg" alt="Dr. Norman Borlaug seen standing in a wheat field taking notes" width="440" height="625.76"" alt="Dr. Norman Borlaug seen standing in a wheat field taking notes" width="440" height="625.76"/>
+          <figcaption id="img-caption_two" class="img-caption">Randoll Coate
           </figcaption>
          </figure>
       </section>
@@ -75,7 +132,7 @@
         </p>
         <figure id="img-div_about" class="about_img-div">
           <img id="image_two" class="image" loading="lazy" src="https://live.staticflickr.com/4063/4578621620_2406d04761_b.jpg" alt="Dr. Norman Borlaug seen standing in a wheat field taking notes" width="440" height="625.76"/>
-          <figcaption id="img-caption_two" class="img-caption">Dr. Norman Borlaug seen standing in wheat field taking notes.
+          <figcaption id="img-caption_two" class="img-caption">Randoll Coate
           </figcaption>
          </figure>
       </section>
@@ -131,26 +188,118 @@
         <div id="tile9" class="tile_div">
             <h3 class="tile_title">Octubre del 2003</h3>
             <p class="tile_desc">4 amigos terminan de plantar el último boxus.</p>
+            <img src="../media/historia/laberinto-historia-construccion.jpg" alt="">
           </div>
-        <div id="tile10" class="tile_div">
-          <blockquote cite="http://news.rediff.com/report/2009/sep/14/pm-pays-tribute-to-father-of-green-revolution-borlaug.htm" class="tile_quote">"Una obra comienza a latir, deja el papel y se hace realidad.
-            Vive, respira." 
-          </blockquote>
-        </div>
+        
       </section>
-
+      <div>
+        <blockquote cite="http://news.rediff.com/report/2009/sep/14/pm-pays-tribute-to-father-of-green-revolution-borlaug.htm" class="tile_quote">"Una obra comienza a latir, deja el papel y se hace realidad.
+          Vive, respira." 
+        </blockquote>
+      </div>
     </main>
     <footer>
-      <div class="copyright">
-        <p>&copy; 2020. Wilhelm Mitschev. All rights reserved.</p>
+      <div class="contenedor-footer-info">
+        <div class="col-lg-6 col-md-12 col-sm-12 contact-left">
+            <div class="row info">
+              <img class="logo-footer" src="../media/logo1.png" alt="logo">
+              <ul>
+                <li>
+                  <div>
+                    <i class="fa fa-map-marker"></i>
+                    <p>Calle Bombal s/n. Cuadro Nacional, San Rafael - Mendoza</p>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <i class="fa fa-phone"></i>
+                    <p>Telefono: +54 9 260 463-8780</p>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <i class="fa fa-clock"></i>
+                    <p>Abierto todos los días de 10:00 a 19:00</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="row redes">
+              <a href="https://www.instagram.com/laberintodeborgesok/?hl=es"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.facebook.com/LaberintodeBorges/"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="https://www.tripadvisor.co/Attraction_Review-g312782-d9884623-Reviews-Laberinto_de_Borges-San_Rafael_Province_of_Mendoza_Cuyo.html"><img src="./media/tripadvisor.png" alt=""></a>
+            </div>
+            
+            <div class="contenedor-footer-menu">
+              <div class="col-lg-6 col-md-12 col-sm-12 menu">
+                <ul>
+                  <li><a href="">HOME</a> </li>
+                  <li><a href="">EL LABERINTO</a></li>
+                  <li><a href="">ESPACIOS</a></li>
+                  <li><a href="">AGENDA</a></li>
+                </ul>
+              </div>
+            </div>
+  
+        </div>
+  
+        <div class="col-lg-6 col-md-12 col-sm-12 contact-right">
+            
+            <h5>Contactenos</h5>
+            <div class="col-xs-12 col-sm-6 col-md-8 form">
+                <form action="#" id="consulta" method="post">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                          <input type="text" name="nombre" id="nombre" class="form-control"
+                            placeholder="Nombre" />
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                          <input type="text" name="apellido" id="apellido" class="form-control"
+                            placeholder="Apellido" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" name="email" id="email" class="form-control"
+                        placeholder="Email" />
+                    </div>
+                        <div class="form-group">
+                      <input type="text" name="asunto" id="asunto" class="form-control"
+                        placeholder="Asunto" />
+                    </div>
+                    <div class="form-group">
+                      <textarea class="form-control" id="consulta" rows="6" cols="20"
+                        placeholder="Escribe tu consulta"></textarea>
+                    </div>
+                    <input type="submit" class="btn btn-primary" name="submit" value="Enviar" />
+                    <div class="loading" style="display: none">
+                      <i class="fa fa-circle-o-notch"> </i> Estamos enviando su
+                      consulta. Aguarde.
+                    </div>
+                    <div class="done" style="display: none">
+                      <b> Gracias ! </b>
+                      , hemos recibido su consulta correctamente, en breve le
+                      respoderemos.
+                    </div>
+                </form>
+            </div>
+            <div class="ubicacion">
+              <h5>Cómo llegar</h5>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.838042246037!2d-68.240760216129!3d-34.65879289628309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9679a962df774b81%3A0xed3f3c33e9cd786d!2sLaberinto%20de%20Borges!5e0!3m2!1ses!2sar!4v1664254374438!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>			
       </div>
-      <nav class="footer_menu">
-        <ul>
-          <li><a href="#about" id="menu_links">About</a></li>
-          <li><a href="#life" id="menu_links">Life</a></li>
-          <li><a href="#quiz" id="menu_links">Quiz</a></li>
-        </ul>
-      </nav>
+      <p class="derechos" >Laberinto de Borges © Copyright 2017. All Rights Reserved.</p>
     </footer>
+
+    <script src="../js/header-scroll.js"></script>
+    <script src="../js/burguer.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
   </body>
 </html>
