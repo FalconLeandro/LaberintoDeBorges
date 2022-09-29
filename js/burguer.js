@@ -6,6 +6,7 @@ const linea3 = document.querySelector(".linea3");
 const menu = document.querySelector(".menu");
 
 burguer.addEventListener("click", lineaAnimada);
+menu.addEventListener("click", lineaAnimada);
 
 function lineaAnimada(){
     linea1.classList.toggle("linea1active");

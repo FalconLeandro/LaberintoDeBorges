@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Merriweather+Sans:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Source+Sans+Pro:ital,wght@0,300;1,300&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Merriweather+Sans:wght@300&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Source+Sans+Pro:ital,wght@0,300;1,300&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 
-@font-face {
-    font-family: 'Open Sans';
-    src: url('/media/GARAIT.TTF') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-}
+// @font-face {
+//     font-family: 'Open Sans';
+//     src: url('/media/GARAIT.TTF') format('truetype');
+//     font-style: normal;
+//     font-weight: normal;
+// }
 
 // $colors: #360745, #D61C59, #E7D84B, #EFEAC5, #1B8798;
 
@@ -135,7 +135,7 @@
             width: 56px;
             height: 43px;
             right: 2.5rem;
-            top: 1.7rem;
+            top: 1.2rem;
             cursor: pointer;
 
 
@@ -323,7 +323,7 @@ header {
         //     overflow: hidden; // le saco el scroll a toda la pagina
         // }
         #menu-burguer:checked~label .btn span {
-            background-color: $color-primario;
+            background-color: $color-secundario;
         }
 
         label .btn {
